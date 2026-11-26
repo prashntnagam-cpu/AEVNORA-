@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEVNORA | Wear Your Style</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f8f5ef;color:#24221f}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:#fff}
+.logo{font-size:27px;font-weight:800;letter-spacing:4px}
+nav a{color:#24221f;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{padding:75px 8%;background:#e9e1d5;text-align:center}
+.hero h1{font-size:clamp(38px,8vw,65px);letter-spacing:5px}
+.hero p{margin:15px 0 25px;color:#555}
+.btn{display:inline-block;background:#24221f;color:white;padding:14px 25px;text-decoration:none;border-radius:3px}
+section{padding:55px 6%}
+h2{text-align:center;font-size:28px;margin-bottom:30px;letter-spacing:2px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.product{background:#fff;padding-bottom:18px;text-align:center}
+.product img{width:100%;height:280px;object-fit:cover}
+.product h3{margin:15px 0 7px}
+.price{font-weight:bold;margin-bottom:13px}
+.product a{display:inline-block;background:#24221f;color:white;padding:11px 20px;text-decoration:none}
+.about{text-align:center;background:#eee8df;line-height:1.8}
+footer{text-align:center;padding:28px;background:#24221f;color:#fff;line-height:2}
+@media(max-width:600px){header{padding:16px 5%;flex-wrap:wrap;gap:12px}nav a{margin-left:10px}.hero{padding:60px 5%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">AEVNORA</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>AEVNORA</h1>
+  <p>One Style. Every You.</p>
+  <p>Discover your everyday aesthetic.</p>
+  <a class="btn" href="#shop">SHOP NOW</a>
+</div>
+
+<section id="shop">
+  <h2>NEW COLLECTION</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="Classic T-shirt">
+      <h3>Classic Essential Tee</h3>
+      <p class="price">₹499</p>
+      <a href="https://wa.me/919702529108?text=Hi%20AEVNORA,%20I%20want%20to%20order%20Classic%20Essential%20Tee">ORDER ON WHATSAPP</a>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600" alt="Fashion outfit">
+      <h3>Everyday Aesthetic</h3>
+      <p class="price">₹699</p>
+      <a href="https://wa.me/919702529108?text=Hi%20AEVNORA,%20I%20want%20to%20order%20Everyday%20Aesthetic">ORDER ON WHATSAPP</a>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Casual jacket">
+      <h3>Urban Streetwear</h3>
+      <p class="price">₹999</p>
+      <a href="https://wa.me/919702529108?text=Hi%20AEVNORA,%20I%20want%20to%20order%20Urban%20Streetwear">ORDER ON WHATSAPP</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>ABOUT AEVNORA</h2>
+  <p>Fashion for everyone. Discover styles that match your personality.</p>
+  <p>Simple looks. Fresh confidence. Everyday fashion.</p>
+</section>
+
+<footer>
+  <h3>AEVNORA</h3>
+  <p>One Style. Every You.</p>
+  <p>Delivery across Mumbai</p>
+  <p>WhatsApp: +91 97025 29108</p>
+  <p>© 2026 AEVNORA. All rights reserved.</p>
+</footer>
+</body>
+</html>
