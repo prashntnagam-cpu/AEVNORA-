@@ -1,86 +1,33 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AEVNORA | Wear Your Style</title>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f3ed"><title>AEVNORA — One Style. Every You.</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f8f5ef;color:#24221f}
-header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:#fff}
-.logo{font-size:27px;font-weight:800;letter-spacing:4px}
-nav a{color:#24221f;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{padding:75px 8%;background:#e9e1d5;text-align:center}
-.hero h1{font-size:clamp(38px,8vw,65px);letter-spacing:5px}
-.hero p{margin:15px 0 25px;color:#555}
-.btn{display:inline-block;background:#24221f;color:white;padding:14px 25px;text-decoration:none;border-radius:3px}
-section{padding:55px 6%}
-h2{text-align:center;font-size:28px;margin-bottom:30px;letter-spacing:2px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.product{background:#fff;padding-bottom:18px;text-align:center}
-.product img{width:100%;height:280px;object-fit:cover}
-.product h3{margin:15px 0 7px}
-.price{font-weight:bold;margin-bottom:13px}
-.product a{display:inline-block;background:#24221f;color:white;padding:11px 20px;text-decoration:none}
-.about{text-align:center;background:#eee8df;line-height:1.8}
-footer{text-align:center;padding:28px;background:#24221f;color:#fff;line-height:2}
-@media(max-width:600px){header{padding:16px 5%;flex-wrap:wrap;gap:12px}nav a{margin-left:10px}.hero{padding:60px 5%}}
-</style>
-</head>
-<body>
-<header>
-  <div class="logo">AEVNORA</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#shop">Shop</a>
-    <a href="#about">About</a>
-  </nav>
-</header>
-
-<div class="hero" id="home">
-  <h1>AEVNORA</h1>
-  <p>One Style. Every You.</p>
-  <p>Discover your everyday aesthetic.</p>
-  <a class="btn" href="#shop">SHOP NOW</a>
-</div>
-
-<section id="shop">
-  <h2>NEW COLLECTION</h2>
-  <div class="products">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="Classic T-shirt">
-      <h3>Classic Essential Tee</h3>
-      <p class="price">₹499</p>
-      <a href="https://wa.me/919702529108?text=Hi%20AEVNORA,%20I%20want%20to%20order%20Classic%20Essential%20Tee">ORDER ON WHATSAPP</a>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600" alt="Fashion outfit">
-      <h3>Everyday Aesthetic</h3>
-      <p class="price">₹699</p>
-      <a href="https://wa.me/919702529108?text=Hi%20AEVNORA,%20I%20want%20to%20order%20Everyday%20Aesthetic">ORDER ON WHATSAPP</a>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Casual jacket">
-      <h3>Urban Streetwear</h3>
-      <p class="price">₹999</p>
-      <a href="https://wa.me/919702529108?text=Hi%20AEVNORA,%20I%20want%20to%20order%20Urban%20Streetwear">ORDER ON WHATSAPP</a>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <h2>ABOUT AEVNORA</h2>
-  <p>Fashion for everyone. Discover styles that match your personality.</p>
-  <p>Simple looks. Fresh confidence. Everyday fashion.</p>
-</section>
-
-<footer>
-  <h3>AEVNORA</h3>
-  <p>One Style. Every You.</p>
-  <p>Delivery across Mumbai</p>
-  <p>WhatsApp: +91 97025 29108</p>
-  <p>© 2026 AEVNORA. All rights reserved.</p>
-</footer>
-</body>
-</html>
+:root{--ink:#25221f;--paper:#f7f3ed;--muted:#77716a;--line:#e6dfd5}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}a{color:inherit}header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:#fff;position:sticky;top:0;z-index:5}.logo{font-size:25px;font-weight:800;letter-spacing:4px}nav a{margin-left:18px;text-decoration:none;font-size:14px}.hero{text-align:center;padding:82px 6%;background:#e9e1d5}.hero h1{font-size:clamp(42px,9vw,76px);letter-spacing:7px;margin:0}.hero p{color:#625b53;line-height:1.6}.btn,button{border:0;background:var(--ink);color:#fff;padding:12px 20px;text-decoration:none;cursor:pointer;border-radius:2px}.btn{display:inline-block;margin-top:12px}section{padding:54px 6%}h2{text-align:center;letter-spacing:2px;margin:0 0 28px}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}.product{background:#fff;padding-bottom:18px;text-align:center}.product img{width:100%;height:285px;object-fit:cover;background:#eee}.product h3{margin:15px 8px 7px}.price{font-weight:bold;margin:0 0 14px}.product a{display:inline-block;background:var(--ink);color:white;padding:11px 18px;text-decoration:none;font-size:13px}.about{text-align:center;background:#eee8df;line-height:1.8}.empty{text-align:center;color:var(--muted);padding:25px}.admin{background:#fff;border:1px solid var(--line);max-width:850px;margin:0 auto;padding:22px}.admin h2{margin-bottom:18px}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}input,textarea{width:100%;padding:12px;border:1px solid #d8d0c6;background:#fff;font:inherit;margin:5px 0 12px}textarea{min-height:75px}label{font-size:13px;color:#5c554d}.admin-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}.secondary{background:#777}.danger{background:#9c302b}.item{border-top:1px solid var(--line);padding:13px 0;display:flex;justify-content:space-between;gap:10px;align-items:center}.item small{display:block;color:var(--muted);margin-top:5px}.hidden{display:none!important}.notice{padding:10px;background:#f1eee8;margin:10px 0;font-size:14px;white-space:pre-wrap}footer{text-align:center;padding:30px;background:var(--ink);color:#fff;line-height:1.9}footer a{color:#fff}@media(max-width:560px){header{padding:15px 4%;flex-wrap:wrap;gap:10px}nav a{margin-left:10px;font-size:12px}.hero{padding:62px 5%}.item{align-items:flex-start;flex-direction:column}}
+</style></head><body>
+<header><div class="logo">AEVNORA</div><nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#admin">Admin</a></nav></header>
+<div class="hero" id="home"><h1>AEVNORA</h1><p>One Style. Every You.<br>Discover your everyday aesthetic.</p><a class="btn" href="#shop">SHOP COLLECTION</a></div>
+<section id="shop"><h2>THE COLLECTION</h2><div id="products" class="products"><p class="empty">Loading collection…</p></div></section>
+<section class="about" id="about"><h2>ABOUT AEVNORA</h2><p>Fashion for everyone. Discover styles that match your personality.</p><p>Simple looks. Fresh confidence. Delivery across Mumbai.</p></section>
+<section id="admin"><div class="admin"><h2>OWNER ADMIN</h2><div id="loginBox"><p>Sign in with your owner account to manage products.</p><label>Email</label><input id="email" type="email" autocomplete="username" placeholder="Owner email"><label>Password</label><input id="password" type="password" autocomplete="current-password" placeholder="Password"><button id="loginBtn">LOGIN</button></div>
+<div id="panel" class="hidden"><p id="signedIn"></p><div class="admin-actions"><button id="logoutBtn" class="secondary">LOG OUT</button></div><h3 id="formTitle">Add a product</h3><form id="productForm"><input id="productId" type="hidden"><div class="fields"><div><label>Product name *</label><input id="name" required maxlength="100"></div><div><label>Price (₹) *</label><input id="price" type="number" min="0" step="0.01" required></div><div><label>Stock quantity</label><input id="stock" type="number" min="0" step="1" value="0"></div><div><label>Category</label><input id="category" maxlength="60"></div></div><label>Description</label><textarea id="description"></textarea><label>Product image</label><input id="image" type="file" accept="image/jpeg,image/png,image/webp"><div class="admin-actions"><button type="submit" id="saveBtn">SAVE PRODUCT</button><button type="button" id="cancelBtn" class="secondary">CLEAR</button></div></form><h3>Your products</h3><div id="adminProducts"></div></div><div id="adminNotice" class="notice hidden" role="status"></div></div></section>
+<footer><h3>AEVNORA</h3><p>One Style. Every You.</p><p>Delivery across Mumbai</p><p>WhatsApp: <a href="https://wa.me/919702529108">+91 97025 29108</a></p><p>© 2026 AEVNORA. All rights reserved.</p></footer>
+<script>
+const SUPABASE_URL='https://ajemyayvflyexvrtecnx.supabase.co';
+const SUPABASE_KEY='sb_publishable_32BQ0cZrxs-0HL97_IZCCQ_xVEjoX4R';
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+const $=id=>document.getElementById(id);let productsCache=[];
+function notice(m){$('adminNotice').textContent=m;$('adminNotice').classList.remove('hidden')}function clearNotice(){$('adminNotice').classList.add('hidden');$('adminNotice').textContent=''}
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function loadProducts(){const t=$('products');t.innerHTML='<p class="empty">Loading collection…</p>';const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});if(error){t.innerHTML='<p class="empty">Our collection is temporarily unavailable. Please try again soon.</p>';console.error(error);return}productsCache=data||[];if(!productsCache.length){t.innerHTML='<p class="empty">New collection coming soon. Check back shortly!</p>';return}t.innerHTML=productsCache.map(p=>'<article class="product">'+(p.image_url?'<img loading="lazy" src="'+esc(p.image_url)+'" alt="'+esc(p.name)+'">':'<div style="height:285px;background:#eee;display:grid;place-items:center;color:#777">AEVNORA</div>')+'<h3>'+esc(p.name)+'</h3><p class="price">₹'+Number(p.price).toLocaleString('en-IN')+'</p>'+(Number(p.stock)>0?'<a target="_blank" rel="noopener" href="https://wa.me/919702529108?text='+encodeURIComponent('Hi AEVNORA, I want to order '+p.name+' (₹'+p.price+'). Please share sizes and delivery details.')+'">ORDER ON WHATSAPP</a>':'<span style="color:#9c302b;font-size:13px">OUT OF STOCK</span>')+'</article>').join('')}
+function resetForm(){$('productForm').reset();$('productId').value='';$('stock').value='0';$('formTitle').textContent='Add a product';$('saveBtn').textContent='SAVE PRODUCT'}
+function renderAdmin(){$('adminProducts').innerHTML=productsCache.length?productsCache.map(p=>'<div class="item"><div><strong>'+esc(p.name)+'</strong><small>₹'+Number(p.price).toLocaleString('en-IN')+' · Stock: '+Number(p.stock||0)+'</small></div><div class="admin-actions"><button type="button" data-edit="'+p.id+'" class="secondary">EDIT</button><button type="button" data-delete="'+p.id+'" class="danger">DELETE</button></div></div>').join(''):'<p class="empty">No products added yet.</p>'}
+async function refreshAdmin(){await loadProducts();renderAdmin()}
+async function showSession(s){const logged=!!s;$('loginBox').classList.toggle('hidden',logged);$('panel').classList.toggle('hidden',!logged);if(logged){$('signedIn').textContent='Signed in as '+(s.user.email||'owner');clearNotice();await refreshAdmin()}}
+$('loginBtn').addEventListener('click',async()=>{clearNotice();const {data,error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error){notice('Login failed: '+error.message);return}await showSession(data.session)});
+$('logoutBtn').addEventListener('click',async()=>{await db.auth.signOut();resetForm();await showSession(null)});$('cancelBtn').addEventListener('click',resetForm);
+$('productForm').addEventListener('submit',async e=>{e.preventDefault();clearNotice();const id=$('productId').value;const rec={name:$('name').value.trim(),price:Number($('price').value),stock:Number($('stock').value||0),category:$('category').value.trim(),description:$('description').value.trim()};if(!rec.name||!Number.isFinite(rec.price)||rec.price<0||!Number.isFinite(rec.stock)||rec.stock<0){notice('Please check product name, price and stock.');return}const f=$('image').files[0];if(f){if(!['image/jpeg','image/png','image/webp'].includes(f.type)){notice('Please use JPG, PNG or WEBP image.');return}if(f.size>5*1024*1024){notice('Image must be 5 MB or smaller.');return}const ext=f.type==='image/png'?'png':f.type==='image/webp'?'webp':'jpg';const path=Date.now()+'-'+Math.random().toString(36).slice(2)+'.'+ext;const {error:upErr}=await db.storage.from('product-images').upload(path,f,{contentType:f.type,upsert:false});if(upErr){notice('Image upload failed: '+upErr.message+'\nStorage upload permission may still need setup.');return}rec.image_url=db.storage.from('product-images').getPublicUrl(path).data.publicUrl}const result=id?await db.from('products').update(rec).eq('id',id):await db.from('products').insert(rec);if(result.error){notice('Could not save product: '+result.error.message);return}notice('Product saved successfully.');resetForm();await refreshAdmin()});
+$('adminProducts').addEventListener('click',async e=>{const ed=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(ed){const p=productsCache.find(x=>String(x.id)===ed.dataset.edit);if(!p)return;$('productId').value=p.id;$('name').value=p.name||'';$('price').value=p.price;$('stock').value=p.stock??0;$('category').value=p.category||'';$('description').value=p.description||'';$('formTitle').textContent='Edit product';$('saveBtn').textContent='UPDATE PRODUCT';$('productForm').scrollIntoView({behavior:'smooth'});return}if(del){const p=productsCache.find(x=>String(x.id)===del.dataset.delete);if(!p||!confirm('Delete '+p.name+'?'))return;const {error}=await db.from('products').delete().eq('id',p.id);if(error){notice('Delete failed: '+error.message);return}notice('Product deleted.');await refreshAdmin()}});
+(async()=>{await loadProducts();const {data}=await db.auth.getSession();await showSession(data.session);db.auth.onAuthStateChange((_e,s)=>{showSession(s)})})();
+</script></body></html>
